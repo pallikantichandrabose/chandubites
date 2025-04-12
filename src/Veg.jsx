@@ -11,7 +11,7 @@ function Veg() {
     const [selectedPrices, setSelectedPrices] = useState([]);
     const [pageNumber, setPageNumber] = useState(1);
 
-    const perPageItem = 9;
+    const perPageItem = 12;
 
     const priceRanges = [
         { label: "₹0 - ₹100", min: 0, max: 100 },
