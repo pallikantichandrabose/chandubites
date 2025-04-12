@@ -1,0 +1,145 @@
+.contact-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f7fafc;
+}
+
+.contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    padding: 30px;
+}
+
+.contact-info {
+    flex: 1;
+    min-width: 300px;
+    background-color: #05445E;
+    color: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.contact-info h2 {
+    margin-bottom: 15px;
+    color: #00ff26;
+    font-size: 24px;
+}
+
+.contact-info p {
+    margin: 12px 0;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.contact-info i {
+    margin-right: 10px;
+    color: #FFD700;
+    font-size: 18px;
+}
+
+.social-title {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #00ff26;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social-link {
+    color: white;
+    font-size: 20px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-link:hover {
+    color: #FFD700;
+    transform: scale(1.2);
+}
+
+.contact-form {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px 10px;
+}
+
+.contact-form h2 {
+    color: #05445E;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.contact-form label {
+    font-weight: 600;
+    display: block;
+    margin-top: 15px;
+    color: #333;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #189AB4;
+    outline: none;
+}
+
+.contact-form button {
+    margin-top: 20px;
+    background-color: #05445E;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #189AB4;
+}
+
+.success-message {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 12px 15px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    font-weight: 500;
+    border-left: 5px solid #28a745;
+}
+
+.map-section {
+    margin-top: 40px;
+}
+
+.map-section h3 {
+    text-align: center;
+    color: #05445E;
+    font-size: 20px;
+    margin-bottom: 15px;
+}

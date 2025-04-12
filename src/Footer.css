@@ -1,0 +1,207 @@
+/* Animation */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Footer Wrapper */
+.footer {
+    background-color: #111;
+    color: #f5f5f5;
+    padding: 10px 0 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    animation: fadeInUp 1s ease forwards;
+}
+
+/* Layout */
+.footer-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+}
+
+/* Section Titles */
+.footer-title {
+    font-size: 30px;
+    font-weight: 800;
+    color: #ff6347;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.footer-subtitle {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+/* Text Content */
+.footer-text {
+    font-size: 15px;
+    color: #ccc;
+    line-height: 1.7;
+}
+
+/* Links */
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #bbb;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.footer-links a:hover {
+    color: #ff6347;
+    transform: translateX(5px);
+}
+
+/* Quick Links Section */
+.footer-quick-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-quick-links li {
+    margin-bottom: 12px;
+}
+
+.footer-quick-links a {
+    color: #bbb;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer-quick-links a:hover {
+    color: #ff6347;
+    transform: translateX(6px);
+}
+
+/* Contact Info */
+.footer-contact p {
+    margin-bottom: 8px;
+    color: #bbb;
+}
+
+.footer-contact .phone,
+.footer-contact .email,
+.footer-contact .map {
+    font-size: 16px;
+    color: #ccc; /* Default color for phone, email, and map */
+}
+
+.footer-contact .phone:hover {
+    color: #28a745; /* Green for phone */
+}
+
+.footer-contact .email:hover {
+    color: #e4405f; /* Instagram-like color for email */
+}
+
+.footer-contact .map:hover {
+    color: #1da1f2; /* Twitter-like color for map */
+}
+
+/* Social Media Section */
+.footer-social {
+    margin-top: 10px;
+}
+
+.footer-subtitles {
+    font-size: 20px;
+    font-weight: 600;
+    margin-left: 0;
+    margin-bottom: 12px;
+}
+
+/* Social Media Links */
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: transform 0.3s ease;
+}
+
+.social-links a:hover {
+    transform: translateX(6px);
+}
+
+/* Brand Icon Colors */
+.social-links a:nth-child(1) svg {
+    color: #3b5998; /* Facebook */
+}
+
+.social-links a:nth-child(2) svg {
+    color: #e4405f; /* Instagram */
+}
+
+.social-links a:nth-child(3) svg {
+    color: #1da1f2; /* Twitter */
+}
+
+.social-links a span {
+    color: #ccc;
+    transition: color 0.3s;
+}
+
+.social-links a:hover span {
+    color: #ff6347;
+}
+
+/* Copyright */
+.footer-copyright {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 13px;
+    color: #666;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .footer-container {
+        text-align: center;
+        grid-template-columns: 1fr;
+    }
+
+    .social-links {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .footer-contact,
+    .footer-social {
+        align-items: center;
+    }
+}
