@@ -1,45 +1,94 @@
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  width: 100%;
+}
+
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #12a208;
-    padding: 10px 30px;
-    color: #ffffff;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #12a208;
+  padding: 10px 20px;
+  color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+.store-name {
+  font-size: 1.5rem;
+  color: #fff;
+  font-family: 'Lucida Sans', sans-serif;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.navbar-links a {
+  color: #ffffff; /* Bright white */
+  text-decoration: none;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: #0adac8; /* Green on hover */
+  background-color: #ffffff;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transform: scale(1.05);
+}
+
+
+.main-content {
+  min-height: 80vh;
+  padding: 20px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .menu-toggle {
+    display: block;
   }
-  
-  .navbar-brand .store-name {
-    font-size: 1.5rem;
-    color: #ffffff;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  }
-  
+
   .navbar-links {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
+    display: none;
+    flex-direction: column;
+    background-color: #0f8b03;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    z-index: 1000;
   }
-  
+
+  .navbar-links.active {
+    display: flex;
+  }
+
   .navbar-links a {
-    color: #ccc;
-    text-decoration: none;
-    font-size: 0.95rem;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    transition: color 0.3s ease;
+    padding: 10px 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
   }
-  
-  .navbar-links a:hover {
-    color: #5047ff;
-    background-color: #ccc;
-    padding: 8px 12px;
-    border-radius: 4px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-  }
-  
-  .main-content {
-    min-height: 80vh;
-    padding: 20px;
-  }
-  
+}

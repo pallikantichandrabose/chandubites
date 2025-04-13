@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome, faLeaf, faDrumstickBite, faIceCream, faShoppingCart, faClipboardList, faInfoCircle, faPhone } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faTimes, faHome, faLeaf, faDrumstickBite, faIceCream, faShoppingCart, faClipboardList, faInfoCircle, faPhone } from '@fortawesome/free-solid-svg-icons';
 
 import Home from './Home';
 import Veg from './Veg';
@@ -18,22 +18,26 @@ import { useSelector } from 'react-redux';
 function App() {
   const cart = useSelector(state => state.cart);
   const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
     <BrowserRouter>
       <header className="navbar">
         <div className="navbar-brand">
-          <h3><strong className="store-name">ChanduBites</strong></h3>
+          <h3 className="store-name">ChanduBites</h3>
         </div>
-        <nav className="navbar-links">
-          <Link to="/"><FontAwesomeIcon icon={faHome} /> Home</Link>
-          <Link to="/veg"><FontAwesomeIcon icon={faLeaf} /> Veg</Link>
-          <Link to="/non-veg"><FontAwesomeIcon icon={faDrumstickBite} /> Non-Veg</Link>
-          <Link to="/sweet"><FontAwesomeIcon icon={faIceCream} /> Sweet</Link>
-          <Link to="/cart"><FontAwesomeIcon icon={faShoppingCart} /> Cart<span> <strong>{totalItems}</strong></span></Link>
-          <Link to="/orders"><FontAwesomeIcon icon={faClipboardList} /> Orders</Link>
-          <Link to="/about-us"><FontAwesomeIcon icon={faInfoCircle} /> About Us</Link>
-          <Link to="/contact-us"><FontAwesomeIcon icon={faPhone} /> Contact Us</Link>
+        <button className="menu-toggle" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+          <FontAwesomeIcon icon={isMobileMenuOpen ? faTimes : faBars} />
+        </button>
+        <nav className={`navbar-links ${isMobileMenuOpen ? 'active' : ''}`}>
+          <Link to="/" onClick={() => setIsMobileMenuOpen(false)}><FontAwesomeIcon icon={faHome} /> Home</Link>
+          <Link to="/veg" onClick={() => setIsMobileMenuOpen(false)}><FontAwesomeIcon icon={faLeaf} /> Veg</Link>
+          <Link to="/non-veg" onClick={() => setIsMobileMenuOpen(false)}><FontAwesomeIcon icon={faDrumstickBite} /> Non-Veg</Link>
+          <Link to="/sweet" onClick={() => setIsMobileMenuOpen(false)}><FontAwesomeIcon icon={faIceCream} /> Sweet</Link>
+          <Link to="/cart" onClick={() => setIsMobileMenuOpen(false)}><FontAwesomeIcon icon={faShoppingCart} /> Cart <strong>({totalItems})</strong></Link>
+          <Link to="/orders" onClick={() => setIsMobileMenuOpen(false)}><FontAwesomeIcon icon={faClipboardList} /> Orders</Link>
+          <Link to="/about-us" onClick={() => setIsMobileMenuOpen(false)}><FontAwesomeIcon icon={faInfoCircle} /> About Us</Link>
+          <Link to="/contact-us" onClick={() => setIsMobileMenuOpen(false)}><FontAwesomeIcon icon={faPhone} /> Contact Us</Link>
         </nav>
       </header>
 
