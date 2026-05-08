@@ -13,7 +13,7 @@ function ContactUs() {
             'service_athcybd',          // Your service ID
             'template_6atuz6k',         // Your template ID
             formRef.current,
-            { publicKey: 'GP_VTjqdhCkwsiPKb' }  // Your public key
+            { publicKey: '2QQAbeBgJt77WjFUD' }  // Your public key
         )
         .then(
             () => {
